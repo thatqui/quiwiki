@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>quiwiki</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Page Header with Title -->
+        <header>
+            <h1 class="headerlink">
+                <a class="headerlink" href="/">quiwiki</a>
+            </h1>
+        </header>
+
+        <br />
+
+        <!-- Search Box Container -->
+        <div class="search-container">
+            <input
+                type="text"
+                id="searchBox"
+                onkeyup="searchLinks()"
+                placeholder="Type a page name to search..."
+            />
+        </div>
+
+        <!-- Links -->
+        <div class="center">
+            <a href="content/sober" class="wikilink">Sober</a> <br />
+            <a href="content/hugo" class="wikilink">Hugo</a> <br />
+            <a href="content/history-of-computing" class="wikilink"
+                >History of Computing</a
+            >
+        </div>
+
+        <script>
+            function searchLinks() {
+                var input = document
+                    .getElementById("searchBox")
+                    .value.toLowerCase();
+
+                var links = document.querySelectorAll(".center .wikilink");
+
+                links.forEach(function (link) {
+                    var text = link.textContent.toLowerCase();
+
+                    if (text.includes(input)) {
+                        link.style.display = "";
+                    } else {
+                        link.style.display = "none";
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

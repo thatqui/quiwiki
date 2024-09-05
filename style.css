@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+body {
+    background-color: grey;
+    font-family: "JetBrains Mono", monospace;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center; /* Center content horizontally */
+    /*justify-content: center;*/
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; /* Center the title horizontally */
+    padding: 20px 0;
+}
+
+.headerlink {
+    font-size: 24px;
+}
+
+.headerlink a {
+    text-decoration: none;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Center the search box horizontally */
+    width: 100%;
+    margin-top: 80px; /* Space below the header */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark grey text color */
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #888; /* Placeholder color */
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #888; /* Darker grey border on focus */
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: white;
+}
